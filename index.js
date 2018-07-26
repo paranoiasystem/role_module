@@ -10,7 +10,7 @@ module.exports.checkRole = (roles) => {
             });
         else {
             jwt.verifyToken(token).then((tokenData) => {
-                console.log(tokenData);
+                //console.log(tokenData);
                 req.tokenData = tokenData;
                 if(roles.includes(tokenData.role))
                     next();
